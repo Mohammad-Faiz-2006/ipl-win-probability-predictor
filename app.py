@@ -23,7 +23,7 @@ cities = ['Hyderabad', 'Bangalore', 'Mumbai', 'Indore', 'Kolkata', 'Delhi',
           'Sharjah', 'Mohali', 'Bengaluru']
 
 
-pipe = pickle.load(open('pipe.pkl', 'rb'))
+pipe = pickle.load(open('model.pkl', 'rb'))
 st.title('IPL Win Probability Predictor')
 
 
@@ -55,7 +55,7 @@ with col5:
     wickets = st.number_input('Wickets Fallen')
 
 
-if st.button('Predict Probability'):
+if st.button('Predict Win Probability'):
 
     runs_left = target-score
     balls_left = 120-(overs*6)
